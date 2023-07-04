@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "787659cb-f491-41ca-be9b-7d0065daf33f",
+		"name": "MarsRover",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16465885"
+	},
+	"item": [
+		{
+			"name": "CreateRover",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"direction\":\"W\",\r\n\"roverId\":4444,\r\n\"roverName\":\"R4\",\r\n\"xCoordinate\":\"3\",\r\n\"yCoordinate\":\"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/createRover",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createRover"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CreateRover",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"direction\":\"W\",\r\n\"roverId\":4444,\r\n\"roverName\":\"R4\",\r\n\"xCoordinate\":\"3\",\r\n\"yCoordinate\":\"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/createRover",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createRover"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jul 2023 14:16:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Successfully added Rover!"
+				}
+			]
+		},
+		{
+			"name": "All Position",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/allPosition",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"allPosition"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All Position",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/allPosition",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"allPosition"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jul 2023 14:15:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Rover-R1,Position\": {\n        \"name\": \"R1\",\n        \"coordinate\": \"5,6\",\n        \"direction\": \"North\",\n        \"x\": 5,\n        \"y\": 6,\n        \"rovers\": [\n            1111\n        ]\n    },\n    \"Rover-R2,Position\": {\n        \"name\": \"R2\",\n        \"coordinate\": \"6,7\",\n        \"direction\": \"North\",\n        \"x\": 6,\n        \"y\": 7,\n        \"rovers\": [\n            2222\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Current Position",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"roverId\":3333\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/currentPosition",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"currentPosition"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Current Position",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"roverId\":3333\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/currentPosition",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"currentPosition"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 03 Jul 2023 17:00:16 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Rover-R3, Current Position\": {\n        \"name\": \"R3\",\n        \"coordinate\": \"3,4\",\n        \"direction\": \"East\",\n        \"x\": 3,\n        \"y\": 4,\n        \"rovers\": [\n            3333\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Move Rover",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"direction\":\"N\",\r\n\"roverId\":1111,\r\n\"roverName\":\"R1\",\r\n\"xCoordinate\":\"5\",\r\n\"yCoordinate\":\"6\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/moveRover?args=f f l f f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"moveRover"
+					],
+					"query": [
+						{
+							"key": "args",
+							"value": "f f l f f"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Move Rover",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"direction\":\"N\",\r\n\"roverId\":1111,\r\n\"roverName\":\"R1\",\r\n\"xCoordinate\":\"5\",\r\n\"yCoordinate\":\"6\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/moveRover?args=f f l f f",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"moveRover"
+							],
+							"query": [
+								{
+									"key": "args",
+									"value": "f f l f f"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jul 2023 14:30:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Rover-R1, Final Position\": {\n        \"name\": \"R1\",\n        \"coordinate\": \"6,7\",\n        \"direction\": \"West\",\n        \"x\": 6,\n        \"y\": 7,\n        \"rovers\": [\n            1111\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
